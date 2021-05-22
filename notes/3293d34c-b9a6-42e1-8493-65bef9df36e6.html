@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
   
-  <title>Digital Garden - Digital Garden</title>
+  <title>Rust - Digital Garden</title>
   
 
   <link
@@ -42,22 +42,22 @@
 <meta name="description" content="A collection of personal notes that might be handy for someone else.">
 <meta name="author" content="Matmaus">
 
-<link rel="canonical" href="https://Matmaus.github.io/">
+<link rel="canonical" href="https://Matmaus.github.io/notes/3293d34c-b9a6-42e1-8493-65bef9df36e6.html">
 
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://Matmaus.github.io/">
+<meta property="og:url" content="https://Matmaus.github.io/notes/3293d34c-b9a6-42e1-8493-65bef9df36e6.html">
 <meta property="og:description" content="A collection of personal notes that might be handy for someone else.">
 <meta property="og:image" content="https://Matmaus.github.ioundefined">
 
 <meta name="twitter:card" content="summary">
 
-<meta name="twitter:url" content="https://Matmaus.github.io/">
+<meta name="twitter:url" content="https://Matmaus.github.io/notes/3293d34c-b9a6-42e1-8493-65bef9df36e6.html">
 <meta name="twitter:description" content="A collection of personal notes that might be handy for someone else.">
 <meta name="twitter:image" content="https://Matmaus.github.ioundefined">
 
 
-  <meta property="og:title" content="Digital Garden - Digital Garden" />
-  <meta name="twitter:title" content="Digital Garden - Digital Garden" />
+  <meta property="og:title" content="Rust - Digital Garden" />
+  <meta name="twitter:title" content="Rust - Digital Garden" />
   
 </head>
 
@@ -129,6 +129,12 @@
     </div>
     <div id="main-content-wrap" class="main-content-wrap">
       
+        
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="https://Matmaus.github.io">Digital Garden</a></li><li class="breadcrumb-nav-list-item"><a href="https://Matmaus.github.io/notes/91af5618-11d4-4eb7-9458-dbb9de312c79.html">Programming Languages</a></li><li class="breadcrumb-nav-list-item">Rust</li></ol>
+          </nav>
+        
+      
       <div id="main-content" class="main-content" role="main">
 
         
@@ -158,10 +164,10 @@
 <div id="main" role="main">
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Digital Garden">
+    <meta itemprop="headline" content="Rust">
     
-    <meta itemprop="datePublished" content="2020-07-28T20:35:48+00:00">
-    <meta itemprop="dateModified" content="2021-03-04T20:51:17+00:00">
+    <meta itemprop="datePublished" content="2021-03-04T18:30:48+00:00">
+    <meta itemprop="dateModified" content="2021-05-22T20:12:00+00:00">
 
     <div class="page__inner-wrap">
 
@@ -171,16 +177,29 @@
 
         
 
-        <h1 id="digital-garden"><a aria-hidden="true" class="anchor-heading" href="#digital-garden"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Digital Garden</h1>
-<p>Home page of my personal Digital Garden. First plant planted in March 2021. I hope the garden will grow with me.</p>
-<p>To read more about Digital Gardens see this one <a href="https://wiki.nikitavoloboev.xyz/#grow-your-own-digital-garden">https://wiki.nikitavoloboev.xyz/#grow-your-own-digital-garden</a>.</p>
-<hr>
-<h2 id="children"><a aria-hidden="true" class="anchor-heading" href="#children"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Children</h2>
-<ol>
-<li><a href="https://Matmaus.github.io/notes/9db25017-3d0f-43f2-9408-37524af1ebf7.html">Git Repositories</a></li>
-<li><a href="https://Matmaus.github.io/notes/1deca60a-aac4-495f-918a-187efa06f91d.html">Programming</a></li>
-<li><a href="https://Matmaus.github.io/notes/91af5618-11d4-4eb7-9458-dbb9de312c79.html">Programming Languages</a></li>
-</ol><span id="navId" data="root"></span>
+        <h1 id="rust"><a aria-hidden="true" class="anchor-heading" href="#rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Rust</h1>
+<h2 id="issues"><a aria-hidden="true" class="anchor-heading" href="#issues"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Issues</h2>
+<h3 id="calling-a-function-through-a-member-variable"><a aria-hidden="true" class="anchor-heading" href="#calling-a-function-through-a-member-variable"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Calling a function through a member variable?</h3>
+<pre class="language-rust"><code class="language-rust"><span class="token comment">// Not possible because `self.go` is an attribute not a method.</span>
+<span class="token keyword">self</span><span class="token punctuation">.</span><span class="token function">go</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+<span class="token comment">// Possible because a variable is created at first and then it is called as a function.</span>
+<span class="token keyword">let</span> f <span class="token operator">=</span> <span class="token keyword">self</span><span class="token punctuation">.</span>go<span class="token punctuation">;</span>
+<span class="token function">f</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+<span class="token comment">// Alternative</span>
+<span class="token punctuation">(</span><span class="token keyword">self</span><span class="token punctuation">.</span>go<span class="token punctuation">)</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+</code></pre>
+<p>Source: <a href="https://stackoverflow.com/questions/27994509/how-do-i-call-a-function-through-a-member-variable">https://stackoverflow.com/questions/27994509/how-do-i-call-a-function-through-a-member-variable</a></p>
+<h2 id="utilities-for-rust"><a aria-hidden="true" class="anchor-heading" href="#utilities-for-rust"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Utilities for Rust</h2>
+<ul>
+<li><a href="https://github.com/killercup/cargo-edit">cargo-edit</a> - a utility for managing cargo dependencies from the command line</li>
+</ul>
+<h2 id="links"><a aria-hidden="true" class="anchor-heading" href="#links"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Links</h2>
+<ul>
+<li><a href="https://github.com/rust-unofficial/awesome-rust">Awesome Rust</a> - a curated list of Rust code and resources</li>
+<li><a href="https://blogsurf.io/tag/rust/">Blogs tagged "rust"</a></li>
+<li><a href="https://medium.com/@alistairisrael/demystifying-closures-futures-and-async-await-in-rust-part-3-async-await-9ed20eede7a4">Demystifying Closures, Futures and async-await in Rust–Part 3: Async &#x26; Await</a></li>
+<li><a href="https://tinkering.xyz/introduction-to-proc-macros/">Introduction to Procedural Macros in Rust</a></li>
+</ul><span id="navId" data="3293d34c-b9a6-42e1-8493-65bef9df36e6"></span>
 
                 
       </section>
